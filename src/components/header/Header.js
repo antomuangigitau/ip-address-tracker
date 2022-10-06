@@ -18,8 +18,7 @@ const Header = () => {
     }
   }, [url]);
   useEffect(() => {
-    fetchMapImg();
-    console.log('useRef');
+    // fetchMapImg();
   }, []);
   console.log(items);
   const handleChange = () => {
