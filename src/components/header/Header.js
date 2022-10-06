@@ -5,7 +5,8 @@ const Header = () => {
   const [input, setInput] = useState('');
   const [items, setItems] = useState([]);
   const API_KEY = process.env.REACT_APP_GEOLOCATION_API_KEY;
-  const url = 'https://geo.ipify.org/api/v2/country,city?apiKey=' + API_KEY;
+  // https://geo.ipify.org/api/v2/country,city?apiKey=at_RPNQ7bUVGh3DiTSrAiP54h8YjrfR6&ipAddress=8.8.8.8
+  const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${input}`;
   const fetchMapImg = useCallback(async () => {
     try {
       setLoading(true);
@@ -18,9 +19,8 @@ const Header = () => {
     }
   }, [url]);
   useEffect(() => {
-    // fetchMapImg();
+    fetchMapImg();
   }, []);
-  console.log(items);
   const handleChange = () => {
     if (input == null) return;
     const foundIp = fetchMapImg(input);
