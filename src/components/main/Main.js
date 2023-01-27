@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import L from 'leaflet';
+import styles from './Main.module.css';
 
 const Main = () => {
   const mapRef = useRef(null);
@@ -35,8 +36,8 @@ const Main = () => {
   });
 
   return (
-    <main>
-      <div id='map' style={mapStyles}></div>
+    <main className={styles.main}>
+      <div id="map" style={mapStyles}></div>
     </main>
   );
 };

@@ -31,15 +31,14 @@ const Header = () => {
   return (
     <header className={styles['header__title'] + ' ' + styles['header__flex']}>
       <h3>IP Address Tracker</h3>
-      <div className={styles['search']}>
-        <div className={styles['search__bar']}>
-          <input
-            type="text"
-            placeholder="Search for any IP address or domain"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-          />
-        </div>
+
+      <div className={styles['search__bar']}>
+        <input
+          type="text"
+          placeholder="Search for any IP address or domain"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+        />
         <button onClick={handleChange} className={styles.btn}>
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
             <path fill="none" stroke="#FFF" strokeWidth="3" d="M2 1l6 6-6 6" />
