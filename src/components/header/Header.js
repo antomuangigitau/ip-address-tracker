@@ -5,6 +5,7 @@ const Header = () => {
   const [input, setInput] = useState('');
   const [items, setItems] = useState([]);
   const API_KEY = process.env.REACT_APP_GEOLOCATION_API_KEY;
+  console.log(API_KEY);
   // https://geo.ipify.org/api/v2/country,city?apiKey=at_RPNQ7bUVGh3DiTSrAiP54h8YjrfR6&ipAddress=8.8.8.8
   const url = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_KEY}&ipAddress=${input}`;
   const fetchMapImg = useCallback(async () => {
@@ -33,15 +34,15 @@ const Header = () => {
       <div className={styles['search']}>
         <div className={styles['search__bar']}>
           <input
-            type='text'
-            placeholder='Search for any IP address or domain'
+            type="text"
+            placeholder="Search for any IP address or domain"
             value={input}
             onChange={(e) => setInput(e.target.value)}
           />
         </div>
         <button onClick={handleChange} className={styles.btn}>
-          <svg xmlns='http://www.w3.org/2000/svg' width='11' height='14'>
-            <path fill='none' stroke='#FFF' strokeWidth='3' d='M2 1l6 6-6 6' />
+          <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+            <path fill="none" stroke="#FFF" strokeWidth="3" d="M2 1l6 6-6 6" />
           </svg>
         </button>
       </div>

@@ -16,7 +16,7 @@ const Main = () => {
     center: [-1.066495, 37.05213],
     zoom: 13,
     zoomControl: false,
-    // maxBounds: L.latLngBounds(L.latLng(-150, -240), L.latLng(150, 240)),
+    maxBounds: L.latLngBounds(L.latLng(-150, -240), L.latLng(150, 240)),
     layers: [tileRef.current],
   };
   // Define the styles that are to be passed to the map instance:
